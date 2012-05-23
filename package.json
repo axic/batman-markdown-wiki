@@ -1,0 +1,19 @@
+{
+  "author": "Alex",
+  "name": "mdwiki",
+  "description": "A tiny Markdown based wiki",
+  "version": "0.1.0",
+  "main": "build/app.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "batman": "~>0.1.0"
+  },
+  "devDependencies": {},
+  "batman": {
+    "appName": "Mdwiki",
+    "build": true,
+    "buildDir": "./build"
+  }
+}

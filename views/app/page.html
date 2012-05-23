@@ -1,0 +1,18 @@
+<h2><label data-bind="wiki.title"></label></h2>
+<hr/>
+
+<div data-showif="wiki.editing">Live preview:</div>
+<div data-showif="wiki.empty"><span data-hideif="wiki.editing">Page is empty, press Edit to add content</span></div>
+<div data-hideif="wiki.empty" data-bind="wiki.formatted"></div>
+
+<hr/>
+
+<button data-event-click="startEditing" data-hideif="wiki.editing">Edit</button>
+
+<div data-showif="wiki.editing">
+  <p><textarea data-bind="wiki.body" data-mixin="editable"></textarea></p>
+  <button data-event-click="save">Save</button>
+  <button data-event-click="remove">Remove page</button>
+</div>
+
+<h4><a data-event-click="index">(Go back to index)</a></h4>
